@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+
+    <h1>HELLO!!! ASHLEYY HAPPY 18TH BIRTHDAY TO YOU!!!! 🎉</h1>
+    <h2 id="typed">To celebrate this special day, I've prepared something to hopefully brighten your day!!!!!!</h2>
+
+    <div class="buttons">
+        <button id="surpriseBtn">🎁 Click for a surprise!</button>
+        <button id="musicBtn">🎵 Play music</button>
+    </div>
+
+    <div class="loop">
+        <div class="image-row">
+            <img src="1.jpg" alt="Photo 1">
+            <img src="2.jpg" alt="Photo 2">
+            <video src="11.mp4" autoplay loop muted playsinline></video>
+            <img src="3.jpg" alt="Photo 3">
+            <img src="4.jpg" alt="Photo 4">
+            <video src="22.mp4" autoplay loop muted playsinline></video>
+            <img src="5.jpg" alt="Photo 5">
+            <img src="6.jpg" alt="Photo 6">
+            <video src="33.mp4" autoplay loop muted playsinline></video>
+        </div>
+    </div>
+
+    <!-- Surprise popup -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-box">
+            <h3>🎂 Happy 18th, Ashley! 🎂</h3>
+            <p>Eighteen already! Thank you for being such a good friend. You make everything more fun, and I’m really glad I know you. I hope today is full of cake, laughs, and people who make you happy. Wishing you a year of new adventures, good memories, and everything you’re hoping for.
+Enjoy your day, you deserve it! 🎂💛</p>
+            <button id="closeBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Put a song file named song.mp3 in the same folder -->
+    <audio id="music" src="song.mp3" loop></audio>
+
+        <!-- Cake on one side, letters on the other -->
+    <div class="side-by-side">
+
+        <!-- Birthday cake -->
+        <div class="cake-section">
+            <p id="cakeText">Click the candles to blow them out! 🕯️</p>
+
+            <div class="cake">
+                <div class="candles">
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-mid"></div>
+                <div class="cake-bottom"></div>
+            </div>
+
+            <button id="relightBtn">🔥 Light them again</button>
+        </div>
+
+        <!-- Letter pile -->
+        <div class="letters-section">
+            <p>Open a letter! 💌</p>
+
+            <div class="letter-pile">
+                <div class="letter" style="--x: 0px; --y: 60px; --r: -8deg;"
+                     data-title="minor momintssss"
+                     data-msg="Halaaaaa kaaa 18 naka ashhh, pede naka makulong, pede naka i reportr sa porpis."></div>
+
+                <div class="letter" style="--x: 40px; --y: 40px; --r: 6deg;"
+                     data-title="Open when you need a smile"
+                     data-msg="Happy 18th, Ashley! Wishing you a day as bright as you are, and a year full of good things. 🎉."></div>
+
+                <div class="letter" style="--x: 30px; --y: 0px; --r: 9deg;"
+                     data-title="My birthday wish for you"
+                     data-msg="On your 18th birthday, I wish you good grades, good food, and good people around you. May you try new things, laugh a lot, and be proud of how far you’ve come. The best is still ahead.."></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Letter popup -->
+    <div id="letterModal" class="modal hidden">
+        <div class="modal-box letter-paper">
+            <h3 id="letterTitle"></h3>
+            <p id="letterText"></p>
+            <button id="letterClose">Close</button>
+        </div>
+    </div>
+
+    <div class="letter-pile" id="letterPile"></div>
+
+<div class="letter-overlay" id="overlay">
+  <div class="letter-paper" role="dialog" aria-modal="true" aria-label="Letter">
+    <button class="close-btn" id="closeBtn" aria-label="Close letter">&times;</button>
+    <div id="letterText"></div>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
